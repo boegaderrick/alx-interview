@@ -15,12 +15,14 @@ def canUnlockAll(boxes):
             remaining.append(i)
             continue
         for key in boxes[i]:
-            keys[key] = True
+            if key < len(keys):
+                keys[key] = True
 
     for i in remaining:
         if keys[i] is False:
             return False
         for key in boxes[i]:
-            keys[key] = True
+            if key < len(keys):
+                keys[key] = True
 
     return True
