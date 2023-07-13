@@ -13,7 +13,7 @@ def lFactor(n: int) -> int:
 
 def minOperations(n: int) -> int:
     """This function contains the logic to solve the challenge"""
-    if n == 1:
+    if n < 2:
         return 0
     f: int = lFactor(n)
     return int((n / f) + minOperations(f))
