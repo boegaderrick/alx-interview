@@ -7,22 +7,20 @@ if __name__ == '__main__':
     codeCount = {}
     iteration = 0
 
-
     def printCodes():
         """This function handles the output"""
         print('File size: {}'.format(fileSize))
         for code, count in sorted(codeCount.items()):
             print('{}: {}'.format(code, count))
 
-
     while True:
         try:
             line = sys.stdin.readline()
-            splitLineList = line.split(' ')
-            if len(splitLineList) < 9:
+            splitLine = line.split(' ')
+            if len(splitLine) < 9:
                 continue
 
-            fileSize, code = fileSize + int(splitLineList[-1]), splitLineList[-2]
+            fileSize, code = fileSize + int(splitLine[-1]), splitLine[-2]
             if not code.isdecimal():
                 continue
 
