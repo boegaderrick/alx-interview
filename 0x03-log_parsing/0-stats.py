@@ -32,4 +32,5 @@ if __name__ == '__main__':
 
         except KeyboardInterrupt as error:
             printCodes()
+            raise error
             exit(1)
