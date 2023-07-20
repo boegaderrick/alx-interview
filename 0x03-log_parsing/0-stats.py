@@ -9,6 +9,8 @@ if __name__ == '__main__':
 
     def printCodes():
         """This function handles the output"""
+        if len(codeCount) < 1:
+            return
         print('File size: {}'.format(fileSize))
         for code, count in sorted(codeCount.items()):
             print('{}: {}'.format(code, count))
@@ -16,6 +18,10 @@ if __name__ == '__main__':
     while True:
         try:
             line = sys.stdin.readline()
+            if not line:
+                if iteration > 0:
+                    printCodes()
+                exit(0)
             splitLine = line.split(' ')
             if len(splitLine) < 9:
                 continue
@@ -32,5 +38,4 @@ if __name__ == '__main__':
 
         except KeyboardInterrupt as error:
             printCodes()
-            raise error
             exit(1)
