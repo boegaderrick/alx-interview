@@ -51,5 +51,7 @@ def validate(binList):
             if count > 4:
                 return False
             j += 1
+			if binList[i][j] == '0' and count < 2:
+                return False
         count = count - 1 if count > 1 else count
     return True if count == 0 else False
