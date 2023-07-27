@@ -16,7 +16,8 @@ def validUTF8(data):
 def getBin(num):
     """
         This function takes in a decimal number, converts it to
-        binary then returns it in string format.
+        binary then returns the 8 least significant bits in
+        string format.
     """
     binString = ''
     while num > 0 and len(binString) < 8:
@@ -50,4 +51,5 @@ def validate(binList):
             if count > 4:
                 return False
             j += 1
+        count = count - 1 if count > 1 else count
     return True if count == 0 else False
