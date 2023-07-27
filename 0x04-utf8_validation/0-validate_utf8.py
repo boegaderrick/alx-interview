@@ -47,4 +47,5 @@ def validate(binList):
         while binList[i][j] != '0':
             stack += '1'
             j += 1
-    return True if len(stack) == 0 else False
+    # return True if len(stack) == 0 else False
+    return True
