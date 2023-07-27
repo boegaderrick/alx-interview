@@ -5,7 +5,7 @@
 def validUTF8(data):
     """
         This function takes in the data to be analysed and calls
-        helper functions that perform to perform the validation.
+        helper functions that perform the validation.
     """
     binList = []
     for num in data:
