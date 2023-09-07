@@ -4,7 +4,7 @@
 
 def isWinner(x, nums):
     """Solution logic"""
-    if not nums:
+    if x < 1:
         return None
 
     scores = {'Maria': 0, 'Ben': 0}
