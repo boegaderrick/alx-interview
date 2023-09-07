@@ -29,7 +29,7 @@ def isWinner(x, nums):
 
 
 def findPrime(nums):
-    """This function finds the smallet prime number in a list"""
+    """This function finds the smallest prime number in a list"""
     for num in nums:
         if num < 2:
             continue
