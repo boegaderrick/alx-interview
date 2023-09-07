@@ -4,8 +4,8 @@
 
 def isWinner(x, nums):
     """Solution logic"""
-    """if type(nums) is not list:
-        return None"""
+    if x < 1 or not nums:
+        return None
 
     scores = {'Maria': 0, 'Ben': 0}
     players = ['Maria', 'Ben']
